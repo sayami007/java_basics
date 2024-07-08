@@ -16,7 +16,9 @@ public class App02HelloWorldSpring {
         //3: Retrieving Beans managed by Spring
         System.out.println(context.getBean("name"));
         System.out.println(context.getBean("age"));
+        System.out.println(context.getBean(Address.class));
         System.out.println(context.getBean("person"));
-        System.out.println(context.getBean("address2"));
+        System.out.println(context.getBean("person2"));
+        System.out.println(context.getBean("person3"));
     }
 }
