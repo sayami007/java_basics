@@ -11,7 +11,9 @@ import java.util.Arrays;
 
 @Component
 class NormalClass {
-
+    NormalClass(){
+        System.out.println("NormalClass");
+    }
 }
 
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
@@ -27,7 +29,7 @@ public class BeanScopesLauncherApplication {
 
     public static void main(String[] args) {
         try (var context = new AnnotationConfigApplicationContext(BeanScopesLauncherApplication.class)) {
-            Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+//            Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 
             System.out.println(context.getBean(NormalClass.class));
             System.out.println(context.getBean(NormalClass.class));
