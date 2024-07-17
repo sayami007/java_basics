@@ -1,8 +1,16 @@
 package com.in28minutes.learn_spring_framework.course;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
+    @Id
     private long id;
+
     private String name;
+
     private String author;
 
     public Course() {
@@ -12,19 +20,6 @@ public class Course {
         this.id = id;
         this.name = name;
         this.author = author;
-    }
-
-    @Override
-    public String toString() {
-        return "Course{" + "id=" + id + ", name='" + name + '\'' + ", author='" + author + '\'' + '}';
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -41,5 +36,14 @@ public class Course {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public void setId(Long id) {
+
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
