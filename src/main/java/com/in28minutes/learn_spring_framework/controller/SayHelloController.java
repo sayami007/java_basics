@@ -33,6 +33,4 @@ public class SayHelloController {
     public String sayHelloJSP() {
         return "sayHello";
     }
-
-
 }
